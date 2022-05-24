@@ -1,0 +1,111 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+form{
+    color: white;
+    font-family:sans-serif;
+}
+#bisi{
+    border: 2px solid red;
+}
+.mainItem{
+    height: 100vh;
+}
+.form-group.error input{
+    border-color: red;
+}
+.form-group.success input{
+    border-color: rgba(100, 214, 25, 0.877);
+}
+body{
+    background:linear-gradient(rgba(11, 27, 238, 0.5)100%,rgba(100, 214, 25, 0.877)100%),url(../images/sixtoos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+#submit{
+  background: #258;
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+  border: none;
+  margin-top: 10px;
+}
+form label{
+    font-size:;
+}
+#open{
+   text-align: center;
+   font-family: sans-serif;
+   font-size: larger;
+   font-weight: bolder;
+   color: white;
+   margin-top: 90px;
+}
+.error{
+    color: red;
+    margin-top: -25px;
+    font-weight: bold;
+    width: 280px;
+    height: 18px;
+    
+}
+.mainContainer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding-top: 25px;
+    display:none;
+}
+.mainContainer.popInfo{
+    display: block;
+}
+#mark{
+    height: 250px ;
+    border: none;
+    margin-top: 30px;
+    outline: none;
+}
+#proceed{
+    border: none;
+    margin-top: 10px;
+    height: 40px;
+    background: #259;
+    font-weight: bolder;
+    color: white;
+    font-size: larger;
+    font-family: sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.mainPop{
+    background-color: whitesmoke;
+    width: px;
+    border-radius: 8px;
+}
+#success{
+    margin-top: 80px;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 70px;
+    color: #259;
+}
+.navbar-nav li{
+    padding-right:40px ;
+}
+.navbar-nav li a{
+color: white !important;
+font-weight: bolder;
+}
+.navbar-img{
+     margin-left: 80px;
+}

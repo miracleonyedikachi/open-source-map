@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSMap</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <section class="container" id="container">
+        <header>
+            <img src="assets/OSM.png" alt="" height="30px">
+            <div class="menu">
+                <ul style="list-style-type: none;" class="nav">
+                    <li><a href="index.html" class="home">Home</a></li>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="toggler"></div>
+        </header>
+
+        <video src="assets/video.mp4" muted loop autoplay width="100%"></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <div class="title">
+                <h2>Going Somewhere?</h2>
+                <p class="home">
+                    Have you ever been in a situation where you have absolutely no idea where you are or where you're going to?
+                </p>
+                <div id="btn1">
+                    <!-- <div class="image"></div> -->
+                    <button type="submit" class="view" id="view">Sign up</button>
+                </div>
+            </div>
+            <div class="flip" id="flip">
+                View your city road map
+            </div>
+        </div>
+        <div class="recent_views">
+            <div class="row">
+                <div class="col1">
+                    <div class="recent" id="recent"></div>
+                    <h3>Recently <span class="new">Viewed Location</span></h3>
+                </div>
+                <div class="col2">
+                    <div class="most" id="most"></div>
+                    <h3>Most <span class="new">Viewed Location</span></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="align">
+                <button type="submit" id="agent"><a href="form.html">Register as an agent</a></button>
+                <button type="submit" id="land"><a href="proj.html">Register as a land owner</a></button>
+                <div class="close" id="close"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <p> Copyright &COPY; 2022 <span>OSMaserplan</span>. All Right Reserved</p>
+        </div>
+    </section>
+
+    <script src="js/script.js">
+    </script>
+</body>
+
+</html>

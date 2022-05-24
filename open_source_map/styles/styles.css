@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+:root {
+    --text: #fff;
+    --form: rgb(247, 244, 244, 0.4);
+    --button: rgb(41, 41, 117);
+    --menu: rgba(41, 41, 117, 0.4);
+    --black: #111;
+    --button2: rgb(52, 52, 90);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    /* color: var(--black); */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    position: relative;
+    min-height: 100%;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: var(--text);
+    z-index: 2;
+    width: 100%;
+    /* border: 2px red solid; */
+}
+
+.container header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+    /* border: 2px red solid; */
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--text);
+    padding-left: 30px;
+}
+
+.menu ul li a:link {
+    color: yellow;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider figure {
+    position: absolute;
+    width: 600%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.slider figure img {
+    width: 16.7%;
+    height: 100%;
+    float: left;
+    object-fit: cover;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+}
+
+
+/* .overlay {
+    position: absolute;
+    width: 600%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: var(--button2);
+    mix-blend-mode: overlay;
+} */
+
+.container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .about {
+    z-index: 20;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    font-size: 14px;
+    column-gap: 20px;
+}
+
+.container .about div {
+    width: 50%;
+}
+
+.toggler,
+.toggling {
+    display: none;
+}
+
+.aboutPage {
+    border: 2px red block;
+}
+
+.text {
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 2px red solid; */
+    margin-top: -40px;
+}
+
+.text h2 {
+    font-size: 3em;
+}
+
+.text .home {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    width: 400px;
+}
+
+.text .about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flip {
+    font-size: 3em;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
+    font-family: sans-serif;
+    align-items: flex-end;
+    background: linear-gradient(to right, rgb(219, 199, 18), rgb(221, 224, 228), rgb(3, 5, 7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#btn1 {
+    display: flex;
+    transition: 0.5s;
+}
+
+.view {
+    min-width: 200px;
+    font-size: 1.4em;
+    padding: 7px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background: var(--text);
+    color: var(--black);
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--button);
+    color: var(--text);
+    border: none;
+    transition: 0.4s ease-in-out;
+}
+
+.view:hover {
+    letter-spacing: 2px;
+}
+
+.recent_views {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* border: 2px red solid; */
+    z-index: 100;
+    padding: 40px 100px;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    background: url(../assets/close.png);
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    filter: invert(1);
+}
+
+.modal {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding-top: 230px;
+    display: none;
+}
+
+.modal.show {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: 0.5s;
+}
+
+.align {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.align button {
+    width: 300px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: large;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+    border: none;
+    font-weight: 700;
+}
+
+.align button::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: var(--text);
+    background: var(--button);
+    transition: 0.5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.align button:hover:before,
+.align button:focus:before {
+    transform: scaleX(1);
+}
+
+.align button:hover,
+.align button:focus {
+    color: var(--text);
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    z-index: 30;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background: var(--menu);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactMain {
+    /* display: flex; */
+    margin-top: 30px;
+    position: relative;
+    background: var(--form);
+    width: 500px;
+    height: 100%;
+    z-index: 20;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: serif;
+}
+
+.name span {
+    color: yellow;
+    font-size: 1.5em;
+}
+
+form .contactForm {
+    padding: 20px;
+}
+
+form .contactForm div {
+    /* padding-bottom: 10px; */
+}
+
+.contactForm h3 {
+    color: var(--black);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+    border-radius: 10px;
+}
+
+.contactForm .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: #fff;
+    background: var(--button);
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.social img {
+    padding-right: 5px;
+}
+
+.footer span {
+    color: yellow;
+}
+
+@media (max-width:800px) {
+    body {
+        min-height: 1000px;
+    }
+    .menu ul {
+        display: none;
+    }
+    .flip {
+        display: none;
+    }
+    .container {
+        /* width: auto;
+        height: 100%; */
+        overflow: hidden;
+        /* border: 2px red solid; */
+    }
+    .container header {
+        /* border: 2px red solid; */
+    }
+    .container .about {
+        margin-top: 150px;
+        flex-direction: column;
+        height: 100%;
+        row-gap: 20px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    .container .about div {
+        height: 40%;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .toggler,
+    .toggling {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background: url(../assets/menu.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        cursor: pointer;
+        filter: invert(1);
+        display: block;
+    }
+    .toggler.active,
+    .toggling.active {
+        background: url(../assets/close.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: center;
+        cursor: pointer;
+        filter: invert(1);
+    }
+    .container.active header {
+        z-index: 200;
+        padding-bottom: 200px;
+        background: var(--menu);
+        transition: 0.5s;
+    }
+    .container.active .menu ul {
+        position: absolute;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: -80px;
+    }
+    .container.active .menu ul li {
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+    .text h2 {
+        font-size: 2.3em;
+    }
+    .text p {
+        font-size: 1em;
+        margin: 20px 0;
+        font-weight: 400;
+        max-width: 280px;
+    }
+    .container,
+    .container header,
+    .recent_views {
+        padding: 40px;
+    }
+    .recent_views {
+        font-size: 14px;
+    }
+    .row {
+        padding: 40px 20px;
+    }
+    .view {
+        font-size: 1em;
+        padding: 5px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-transform: uppercase;
+        background: var(--button);
+        color: var(--text);
+    }
+    .align {
+        gap: 5px;
+    }
+    .align button {
+        width: 200px;
+        padding: 5px;
+        font-size: small;
+    }
+    .modal.show {
+        width: 300px;
+        height: 500px;
+    }
+    .contactMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 400px;
+        width: 280px;
+    }
+    .name {
+        position: absolute;
+        top: -25px;
+        left: -30px;
+        text-transform: uppercase;
+        font-size: 1.3em;
+        font-family: serif;
+    }
+    .name span {
+        color: yellow;
+        font-size: 1.3em;
+    }
+    form .contactForm {
+        padding: 10px;
+    }
+    .contactForm .inputBox {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contactForm .inputBox input,
+    .contactForm .inputBox textarea {
+        width: 100%;
+        border: 1px solid #555;
+        padding: 10px;
+        color: #111;
+        font-size: 16px;
+        font-weight: 300;
+        resize: none;
+        border-radius: 10px;
+    }
+    .contactForm .inputBox input[type="submit"] {
+        font-size: 1em;
+        color: #fff;
+        background: var(--button);
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        max-width: 100px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+    }
+    .social img {
+        padding-right: 5px;
+        height: 10px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:800px) and (max-width:850px) {
+    .container,
+    .container header,
+    .recent_views {
+        padding: 20px;
+    }
+}
